@@ -9,7 +9,7 @@ class Person
   def full_name
     first_name + " " + last_name
   end
-  def person_age 
+  def person_age
     first_name + " is " + age
   end
 end
@@ -22,10 +22,10 @@ class Contacts
       command = ask("> ")
 
       if command == "list"
-        puts "Name".ljust(30) + "Phone".rjust(12)
+        puts "Name".ljust(20) + "Phone".rjust(12) + "Age".rjust(10)
         puts "-" * 42
         people.each do |person|
-          puts person.full_name.ljust(30) + person.phone.rjust(12)
+          puts person.full_name.ljust(20) + person.phone.rjust(12) + person.age.rjust(10)
         end
 
       elsif command == "add"
